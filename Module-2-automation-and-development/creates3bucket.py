@@ -11,7 +11,6 @@ def creates3bucket(name):
     create = client.create_bucket(
         ACL='private',
         Bucket=name,
-
     )
 
     print(create)

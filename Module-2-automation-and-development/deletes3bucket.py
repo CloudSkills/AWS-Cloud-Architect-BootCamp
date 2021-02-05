@@ -8,12 +8,11 @@ def main():
 def deletes3bucket(name):
     client = boto3.client('s3')
 
-    create = client.delete_bucket(
+    delete = client.delete_bucket(
         Bucket=name,
-
     )
 
-    print(create)
+    print(delete)
 
 
 name = sys.argv[1]
