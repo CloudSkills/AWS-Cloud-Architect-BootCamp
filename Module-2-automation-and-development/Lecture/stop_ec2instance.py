@@ -2,12 +2,15 @@
 # python stop_ec2instance.py 
 
 import boto3
+import sys
 
 
 ec2 = boto3.client('ec2')
 
-def stop_ec2instance():
+def stop_ec2instance(instanceID):
     
-    ec2.stop_instances(InstanceIds= ['i-06be78226da26a405'])
+    ec2.stop_instances(InstanceIds= [instanceID])
 
-stop_ec2instance()
+instanceID = sys.argv[1]
+
+stop_ec2instance(instanceID)
